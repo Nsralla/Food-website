@@ -1,0 +1,387 @@
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  color: white;
+  height: auto;
+  width: 100%;
+}
+body {
+  height: auto;
+}
+section {
+  height: 100%;
+}
+
+nav {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  z-index: 200;
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.8rem;
+  margin: 1em;
+  transition: 0.6s all;
+}
+
+nav ul li a:hover {
+  color: rgb(32, 204, 32);
+}
+
+/* body  body: main1, main2,main3*/
+section .body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.7fr 0.7fr 0.1fr;
+  background-color: black;
+  row-gap: 3em;
+}
+section .main1 {
+  background-image: url("/images/image/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section .main1 .left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3em;
+  text-align:start;
+}
+section .main1 .left h2 {
+  font-family: sans-serif;
+  font-size: 2.6rem;
+  color: rgb(176, 175, 177);
+}
+
+section .main1 .left h1 {
+  font-family: sans-serif;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+section .main1 .left h1 span {
+  color: rgb(152, 229, 76);
+  font-family: sans-serif;
+}
+section .main1 .left p {
+  font-family: sans-serif;
+  font-size: 2.8rem;
+  color: rgb(176, 175, 177);
+}
+
+/* search pannel */
+.search-panel {
+  position: relative;
+}
+
+.search-panel input[type="text"] {
+  width: 25em;
+  padding-left: 3em;
+  height: 4em;
+  margin: 0;
+  margin-right: -3px;
+}
+.search-panel input[type="text"]::placeholder {
+  font-size: 2rem;
+  vertical-align: middle;
+  padding-left: 1em;
+}
+
+.search-panel input[type="text"]:focus {
+  /* font-size: 2rem; */
+}
+
+.search-panel .fa-magnifying-glass {
+  position: absolute;
+  left: 10px;
+  top: 48%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.search-panel button {
+  background-color: #98e54c;
+  border: none;
+  padding: 1.6em 2em;
+  margin: 0;
+}
+
+/* MAIN2
+//////////////////////////////// 
+*/
+
+/* Existing styles */
+/* (Your existing CSS here) */
+.main2 {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Creates three columns of equal width */
+  gap: 20px; /* Adjust the gap between grid items as needed */
+}
+
+.div1,
+.div2,
+.div3 {
+  display: inline-block;
+  position: relative;
+}
+
+.main2 img {
+  width: 100%; /* Ensures images are responsive and fit their containers */
+  height: 100%; /* Maintains the aspect ratio of the images */
+  object-fit: cover;
+  border-radius: 3em;
+}
+
+.main2 p {
+  position: absolute;
+  font-size: 2rem;
+  margin: 0;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .main2 {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for tablets and medium-sized devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main2 {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
+
+/* //////////////////////////// MAIN3 */
+
+section .main3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+section .main3 .div1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section .main3 h1 {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+section .main3 h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+section .main3 p {
+  font-size: 2rem;
+  text-align: justify;
+  font-family: sans-serif;
+  width: 70%;
+}
+
+section .main3 img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3em;
+}
+
+section .main3 button {
+  border-end-end-radius: none;
+  background-color: #98e54c;
+  color: black;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 2em;
+  padding: 1em;
+}
+
+/* ////////////////////// MAIN4 ////////////// */
+
+section .main4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  row-gap: 2em;
+  column-gap: 2em;
+}
+
+section .main4 img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2em;
+}
+section .main4 h1 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.main4 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main4 .info button {
+  background-color: #98e54c;
+  border: none;
+  padding: 1.6em 2em;
+  margin: 0;
+  border-radius: 2em;
+}
+
+/* MAIN5    /////////////////// */
+.main5 {
+  background-image: url("/images/image/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  border-radius: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.main5 h1 {
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+}
+.main5 h2 {
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main5 p {
+  font-size: 3rem;
+  line-height: 1.5em;
+  width: 50%;
+  color: rgb(203, 207, 207);
+}
+
+.main5 button {
+  background-color: #98e54c;
+  border: none;
+  padding: 1.4em 2em;
+  border-radius: 1em;
+  font-size: 1.9rem;
+}
+
+/* footer */
+.footer {
+  margin: 4em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+}
+.footer .left {
+  background-color: #98e54c;
+  background-image: url("/images/image/subscribe.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3em;
+}
+
+
+
+.newsletter,
+.location,
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter h1{
+    font-size: 3rem;
+}
+.newsletter p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: black;
+  border-bottom: 1px solid #98e54c;
+  border-inline: none;
+  color: white;
+}
+
+
+
+
+.newsletter button {
+  padding: 0.5rem;
+  background-color: #98e54c;
+  border: none;
+  cursor: pointer;
+}
+
+.last{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+.social{
+    text-align: center;
+}
+
+.social i{
+    transition: 0.3s all;
+    font-size: 2rem;
+    margin: 1em 0.4em;
+}
+
+.social i:hover{
+    color: #98e54c;
+
+}
+
